@@ -1,0 +1,294 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="白马程序员：学习 AI 智能体开发与大模型微调，配套代码、章节自测，随时开启学习。">
+  <title>白马程序员 · AI 编程课程</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      background: #f5f6f8;
+      color: #172235;
+      font-family: -apple-system, BlinkMacSystemFont,
+        "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    main {
+      width: min(100% - 40px, 760px);
+      margin: 64px auto;
+    }
+
+    .site-title {
+      margin: 0 0 22px;
+      font-size: 14px;
+      font-weight: 600;
+      color: #6b7280;
+      letter-spacing: 2px;
+    }
+
+    .card {
+      overflow: hidden;
+      background: #ffffff;
+      border: 1px solid #e7eaf0;
+      border-radius: 24px;
+      box-shadow: 0 12px 40px rgba(23, 34, 53, 0.04);
+    }
+
+    .illustration {
+      display: block;
+      width: 100%;
+      height: auto;
+      background: #ffffff;
+      border-bottom: 1px solid #edf0f4;
+    }
+
+    .content {
+      padding: 36px;
+    }
+
+    .label {
+      margin: 0 0 12px;
+      color: #41648c;
+      font-size: 13px;
+      font-weight: 600;
+      letter-spacing: 1px;
+    }
+
+    h1 {
+      margin: 0;
+      font-size: 36px;
+      line-height: 1.3;
+      letter-spacing: -1px;
+    }
+
+    .tagline {
+      margin: 16px 0 12px;
+      font-size: 22px;
+      font-weight: 600;
+      line-height: 1.6;
+    }
+
+    .intro {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.9;
+      color: #657083;
+    }
+
+    .features {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 24px;
+      padding: 28px 0;
+      margin: 28px 0;
+      border-top: 1px solid #edf0f4;
+      border-bottom: 1px solid #edf0f4;
+      list-style: none;
+    }
+
+    .features h2 {
+      margin: 0 0 8px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .features p {
+      margin: 0;
+      color: #657083;
+      font-size: 14px;
+      line-height: 1.8;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-height: 48px;
+      padding: 12px 24px;
+      border-radius: 12px;
+      background: #172c49;
+      color: #ffffff;
+      text-decoration: none;
+      font-size: 15px;
+      font-weight: 600;
+      transition: background 0.2s;
+    }
+
+    .button:hover {
+      background: #27466d;
+    }
+
+    .button:focus-visible {
+      outline: 3px solid #7ba8df;
+      outline-offset: 4px;
+    }
+
+    .note {
+      margin: 14px 0 0;
+      color: #7b8492;
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    footer {
+      padding: 24px 0;
+      text-align: center;
+      color: #8a929e;
+      font-size: 12px;
+    }
+
+    @media (max-width: 520px) {
+      main {
+        width: calc(100% - 28px);
+        margin: 28px auto;
+      }
+
+      .content {
+        padding: 26px 22px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      .tagline {
+        font-size: 19px;
+      }
+
+      .features {
+        grid-template-columns: 1fr;
+        gap: 20px;
+      }
+
+      .button {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <main>
+    <p class="site-title">我们的应用</p>
+
+    <article class="card">
+      <!-- 内嵌矢量插图，不需要上传图片文件 -->
+      <svg
+        class="illustration"
+        viewBox="0 0 760 260"
+        xmlns="http://www.w3.org/2000/svg"
+        role="img"
+        aria-labelledby="art-title"
+      >
+        <title id="art-title">以深蓝色折线连接的抽象学习路径</title>
+
+        <rect width="760" height="260" fill="#ffffff"/>
+
+        <g
+          fill="none"
+          stroke="#e5eaf1"
+          stroke-width="1"
+        >
+          <path d="M100 65H660"/>
+          <path d="M100 130H660"/>
+          <path d="M100 195H660"/>
+          <path d="M175 40V220"/>
+          <path d="M305 40V220"/>
+          <path d="M435 40V220"/>
+          <path d="M565 40V220"/>
+        </g>
+
+        <g
+          fill="none"
+          stroke="#172c49"
+          stroke-width="12"
+          stroke-linecap="square"
+          stroke-linejoin="miter"
+        >
+          <path d="M235 180L315 80H385"/>
+          <path d="M375 180H445L525 80"/>
+        </g>
+
+        <path
+          d="M352 145L408 115"
+          fill="none"
+          stroke="#708bab"
+          stroke-width="8"
+          stroke-linecap="square"
+        />
+      </svg>
+
+      <div class="content">
+        <p class="label">AI 开发 · 系统学习</p>
+
+        <h1>白马程序员</h1>
+
+        <p class="tagline">
+          想寻找高收入机会？<br>
+          从学习 AI 开发开始。
+        </p>
+
+        <p class="intro">
+          从智能体开发到大模型微调，通过清晰的章节、
+          配套代码和实践案例，逐步理解 AI 开发，
+          按自己的节奏积累技术知识。
+        </p>
+
+        <ul class="features">
+          <li>
+            <h2>智能体开发</h2>
+            <p>
+              71 个章节页面，学习智能体原理、
+              提示词、工具调用与开发框架。
+            </p>
+          </li>
+
+          <li>
+            <h2>大模型与微调</h2>
+            <p>
+              96 个章节页面，涵盖 Transformer、
+              模型训练、LoRA 微调与推理。
+            </p>
+          </li>
+
+          <li>
+            <h2>配套代码与章节自测</h2>
+            <p>
+              结合代码示例和实践案例理解知识，
+              通过章节自测巩固所学。
+            </p>
+          </li>
+
+          <li>
+            <h2>离线阅读，接着学习</h2>
+            <p>
+              课程正文与配图支持离线阅读，
+              记录上次阅读章节，方便继续学习。
+            </p>
+          </li>
+        </ul>
+
+        <a
+          class="button"
+          href="https://apps.apple.com/app/id6828509473"
+        >
+          在 App Store 查看
+        </a>
+
+        <p class="note">
+          适用于 iOS 18 及以上版本。
+          两门课程分别订阅；在线实践需联网。
+        </p>
+      </div>
+    </article>
+
+    <footer>白马程序员 · 学习 AI 开发</footer>
+  </main>
+</body>
+</html>
